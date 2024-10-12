@@ -2,6 +2,56 @@
 
 Geração e execução de testes unitários com o Randoop e EvoSuite em um projeto maven pelo terminal do Linux.
 
+## Rodando remotamente com o Github Codespaces
+O GitHub Codespaces é um ambiente de desenvolvimento instantâneo e baseado na nuvem que usa um contêiner para fornecer linguagens, ferramentas e utilitários de desenvolvimento comuns. Ele é gratuito e oferece um terminal linux com uma serie de pacotes utilitario já pré-instalados, como o Sdkman que vamos usar para mudar a versão do java e do maven no nosso ambiente de desenvolvimento. 
+
+### Faça um fork deste repositório!
+Antes de prosseguir faça um fork desse repositório na sua conta, para que você consiga fazer os commits das suas alterações e futuramente possa baixar o repositório p fazer o envio da atividade.
+
+
+Para fazer o fork deste repositório, usando o seu navegador vá para a raiz do repositorio remoto. Clique em <b>"Fork"</b>, quando você for redirecionado para outra pagina clique em <b>"Create Fork"</b>
+
+![plot](./assets/fork.png)
+
+
+### Criando um novo Cdespace
+No seu navegador vá para a raiz do repositorio remoto navegue pelos seguintes menus CODE > Codespaces > Create a codespace on main.
+
+![plot](./assets/guia_codespaces.png)
+
+<br>
+
+Se tudo der certo você irá se deparar com um editor de codigo similar ao VS Code no seu navegador como na imagem abaixo.
+
+![plot](./assets/print_codespaces.png)
+
+### Configurando o ambiente
+Com o codespace criado vamos configurar a versão do java e do maven.
+
+#### Mudando a versão do java para 8
+``` bash
+sdk install java 8.0.422-tem
+```
+
+#### Definindo o java 8.0.422-tem como o padrão
+``` bash 
+sdk default java 8.0.422-tem
+``` 
+
+#### Mudando a versão do Maven para
+``` bash
+sdk install maven 3.6.3
+```
+
+#### Definindo o maven 3.6.3 como o padrão
+``` bash 
+
+sdk default maven 3.6.3
+``` 
+
+Agora você está com um ambiante no codespaces configurado para poder continuar seguindo passo a passo para gerar e executar testes unitario com o Randoop e EvoSuite. Pode pular a criação do projeto maven e ir direto para <a href="#randoop">Rodando o Randoop</a> ou para <a href="#evosuite">Rodando o EvoSuite</a>.
+<br>
+
 ## Recursos utilizados
 
 #### Gerenciador de versão do java
@@ -39,7 +89,7 @@ Copie os arquivos .jar [evosuite-1.0.6.jar](./evosuite-1.0.6.jar) e [randoop-all
 mvn install
 ```
 
-## Rodando o Randoop
+<h2 id="randoop">Rodando o Randoop</h2>
 
 #### Compilar e empacotar o projeto
 
@@ -69,7 +119,7 @@ mvn test
 
 https://randoop.github.io/randoop/manual/index.html#command-line-options
 
-## Rodando o EvoSuite
+<h2 id="evosuite">Rodando o EvoSuite</h2>
 
 #### Compilar e empacotar o projeto
 
